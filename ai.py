@@ -13,7 +13,7 @@ def get_ai_response(message, history=None):
     messages.append({"role": "user", "content": message})
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4.1",
         messages=messages
     )
     return response.choices[0].message.content
